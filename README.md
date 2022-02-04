@@ -1,12 +1,11 @@
-# remman.c: A lightweight command line tool for remote machine management
+#remman.c: A lightweight command line tool for remote machine management
 
 remman.c uses ssh to transfer commands to machines. A Makefile is included for easy compilation.
 
-## How to Compile:
-
+##How to Compile:
 make
 
-## How to Run:
+##How to Run:
 
 ./remman "command" "user" "machine1 machine2..."
 

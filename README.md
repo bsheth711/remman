@@ -9,19 +9,26 @@ remman.c uses ssh to transfer commands to machines. A Makefile is included for e
     make
 
 ## How to Run:
+    Sending command usage:
+    $ ./remman s "user" "machine1 machine2..." "command"
+    Example:
+    $ ./remman s "ls -la" "myusername123" "12.312.31.123 1.123.32.123"
 
-    ./remman "command" "user" "machine1 machine2..."
+    Sending file usage:
+    $ ./remman c "file"  "user" "machine1 machine2..." "location"
+    Example:
+    $ ./remman c "file.txt" "myusername123" "12.312.31.123 1.123.32.123" "~/documents"
 
-    EXAMPLE:
-    
-    ./remman "ls -la" "myuser123" "13.12.123.12 122.14.12.1 123.14.123.1"
+    Getting file usage:
+    $ ./remman g  "user" "machine1 machine2..." "file" "location"
+    Example:
+    $ ./remman g "myusername123" "12.312.31.123 1.123.32.123" "~/myfolder/file.txt" "./mydir"
 
 
-IMPORTANT: remman.c will not work unless you already have authorized ssh keys on the machines you attmept to connect to. Additionally, remman is currently an unsafe program vulnerable to buffer overflow attacks. Only run it on machines you trust. 
+IMPORTANT: remman.c will not work unless you already have authorized ssh keys on the machines you attmept to connect to. Additionally, command injection is possible--remman is meant to only be manually used. 
 
 # In Progress:
-Easy File Transfering  
-More Complex Command Line Argument Parsing
+File I/O
 
 Author: Benjamin Sheth
 All rights reserved.

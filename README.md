@@ -1,22 +1,26 @@
+
 # remman.c: A lightweight command line tool for remote machine management
 
 remman.c uses ssh to transfer commands to machines. A Makefile is included for easy compilation.
 
+
 ## How to Compile:
-make
+  
+    make
 
 ## How to Run:
-./remman "command" "user" "machine1 machine2..."
 
-EXAMPLE:
-./remman "ls -la" "myuser123" "13.12.123.12 122.14.12.1 123.14.123.1"
+    ./remman "command" "user" "machine1 machine2..."
+
+    EXAMPLE:
+    
+    ./remman "ls -la" "myuser123" "13.12.123.12 122.14.12.1 123.14.123.1"
 
 
-IMPORTANT: remman.c will not work unless you already have authorized ssh keys on the machines you
-attmept to connect to. 
+IMPORTANT: remman.c will not work unless you already have authorized ssh keys on the machines you attmept to connect to. Additionally, remman is currently an unsafe program vulnerable to buffer overflow attacks. Only run it on machines you trust. 
 
-#In Progress:
-Easy File Transfering
+# In Progress:
+Easy File Transfering  
 More Complex Command Line Argument Parsing
 
 Author: Benjamin Sheth
